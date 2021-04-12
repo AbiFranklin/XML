@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Used to validate XML -->
+<!-- Focused on structure -->
+
+<!-- Located at the beginning of file, possibly behind XML declaration, processing instructions, or comments -->
+<!-- Starts with DOCTYPE and root element -->
+<!-- Contains declarations of internal and external subsets, external are listed before square brackets, internal take precedence -->
+
+<!-- In case of duplicate entities, first entity takes precedence -->
+
+<!DOCTYPE items SYSTEM "Copyright.dtd" [
+    <!ELEMENT items (item)>
+    <!ELEMENT item (#PCDATA)>
+
+    <!ATTLIST items cpr CDATA #REQUIRED>
+    <!ATTLIST items part-class CDATA #REQUIRED>
+
+    <!-- Internal entity-->
+    <!ENTITY copyright "Copyright Internal 2021">
+    <!-- External entity (also redudant fron above) -->
+    <!ENTITY copyright SYSTEM "Copyright.dtd">
+    <!ENTITY xparts "Expendable Parts">
+    <!ENTITY tool "hammer">
+    <!ENTITY tool "drill">
+    <!ENTITY gear-description "This is a gear.">
+    <!ENTITY nail-description SYSTEM "nail.txt">
+    <!-- Hardness referenced in stone.txt, caution with text replacements getting to large (possible DoS issue) -->
+    <!ENTITY hardness "h8">
+    <!ENTITY stone SYSTEM "stone.txt">
+
+    <!-- This will not work as the individual entitiies are not well formed-->
+    <!ENTITY start "<item>">
+    <!ENTITY text "text">
+    <!ENTITY end "</item>">
+
+    <!-- This will work as it is well formed -->
+    <!ENTITY replacetext "<item>Tex</item>">
+]>
+
+<items cpr="&copyright;" part-class="&xparts;">
+    <item>&tool;</item>
+    <item>&gear-description;</item>
+    <item>&nail-description;</item>
+    <item>&stone;</item>
+    <!-- &start;&text;&end; : Doesn't work -->
+    &replacetext;
+</items>

@@ -1,4 +1,4 @@
-<!-- DTD-->
+<!-- DTD -->
 <!DOCTYPE items [
     <!-- Validate XML document-->
     <!ELEMENT items (item*)>
