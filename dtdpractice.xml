@@ -1,0 +1,28 @@
+<!-- DTD-->
+<!DOCTYPE items [
+    <!-- Validate XML document-->
+    <!ELEMENT items (item*)>
+    <!ELEMENT item (name, price)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+    <!ATTLIST name image ENTITY #REQUIRED>
+    <!ATTLIST items cpr CDATA #REQUIRED>
+    <!-- End Validation portion-->
+    <!NOTATION gif SYSTEM "http://en.wikipedia.org/wiki/Gif">
+    <!NOTATION jpg SYSTEM "http://www.w3.org/graphics/JPEG/">
+    <!-- Entity declaration-->
+    <!ENTITY house SYSTEM "urn:house.gif" NDATA gif>
+    <!ENTITY horse SYSTEM "urn:horse.jpg" NDATA jpg>
+    <!ENTITY copyright "Copyright me 2021">
+]>
+
+<items cpr="&copyright;">
+    <item>
+        <name image="house">Tara</name>
+        <price>50.09</price>
+    </item>
+    <item>
+        <name image="horse">Trigger</name>
+        <price>34.67</price>
+    </item>
+</items>
