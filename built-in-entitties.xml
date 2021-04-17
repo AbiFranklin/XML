@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<text>
+    <!-- no DTD needed-->
+    <!-- for <-->
+    <entity>&lt;</entity>
+    <!-- for & -->
+    <entity>&amp;</entity>
+    <!-- for > -->
+    <entity>&gt;</entity>
+    <!-- for ' -->
+    <entity>&apos;</entity>
+    <!-- for " -->
+    <entity>&quot;</entity>
+    <!-- CDATA section alternative -->
+    <entity><![CDATA[ < & > ' " ]]></entity>
+    <!-- for ]]> if needed -->
+    <entity>]]&gt;</entity>
+    <!-- Element with attribute, attribute names must be unique in an element and do not have a set order -->
+    <entity name="Abi">This is an element with an attribute.</entity>
+    <!-- Element Normal Form, keeps child elements in order vs. unordered attributes -->
+    <item>
+        <serial-number>12345</serial-number>
+        <price>$4.55</price>
+    </item>
+    <!-- Attribute Normal Form -->
+    <item serial-number="12345" price="$4.55" />
+    <!-- Rule of thumb, typically only metadata should be represented in attributes -->
+</text>
