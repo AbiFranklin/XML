@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<char-of-accounts xmlns:acct="urn:accounting">
+    <account acct:status="open">
+        <name>Consulting</name>
+        <balance>1000</balance>
+    </account>
+    <account acct:status="closed">
+        <name>Rent</name>
+        <balance>2000</balance>
+    </account>
+</char-of-accounts>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Keeps names shareable between applications --> 
+<!-- For act:invoice xmlns:act = "accounting" - accounting is the Namespace URI, invoice is the local name -->
+<invoices>
+    <invoice invoice-number="4556" xmlns="urn:auction-place/v2">
+        <line-item>
+            <inventory-number>12345</inventory-number>
+            <price>30.00</price>
+            <purchaser-fee>30.00</purchaser-fee>
+        </line-item>
+        <line-item>
+            <inventory-number>6789</inventory-number>
+            <price>10.00</price>
+            <purchaser-fee>15.00</purchaser-fee>
+        </line-item>
+    </invoice>
+    <invoice invoice-number="4556" xmlns="urn:retail-place/v1">
+        <line-item>
+            <description>Nail</description>
+            <quantity>5</quantity>
+            <price>0.34</price>
+        </line-item>
+    </invoice>
+</invoices>
