@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % cpy-year "2022">
+<!ENTITY % cpy-owner "Me">
+<!ENTITY % scene "I">
+<!ENTITY % act "I">
+<!ENTITY % play "N/A">
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title produced CDATA #IMPLIED>
+<!ENTITY scene-title "<title produced='%cpy-year;'> Play &quot;%play;&quot; ACT %act; SCENE %scene; </title>">
+<!ENTITY copyright "Copyright %cpy-owner; %cpy-year;"> 
