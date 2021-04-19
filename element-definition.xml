@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE messages [
+    <!-- Requires messages to start and end with a message followed by a message-break or additonal message -->
+    <!ELEMENT messages (message, (message-break, message)?)+>
+    <!-- DTD determines order. If from is listed before to in message element, validation will throw an error. -->
+    <!ELEMENT message (to, from, body)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT body (#PCDATA)>
+    <!ELEMENT message-break EMPTY>
+    <!-- Allows for any content in the entity element, but the the content must be declared in the DTD -->
+    <!ELEMENT entity ANY>
+]>
+<messages>
+    <message>
+        <to>Abi</to>
+        <from>Bob</from>
+        <body>HI!</body>
+    </message>
+    <message-break />
+    <message>
+        <to>Fred</to>
+        <from>Barney</from>
+        <body>Yabba Dabba Doo!</body>
+    </message>
+    <message>
+        <to>
+        </to>
+        <from></from>
+        <body></body>
+    </message>
+    <message>
+        <to></to>
+        <from></from>
+        <body></body>
+    </message>
+</messages>
