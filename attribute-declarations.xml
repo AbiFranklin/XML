@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CDATA = unparsed character data -->
+<!DOCTYPE item [
+    <!ELEMENT item ANY>
+    <!-- size and stockroom optional. Will be assigned defaults if not declared. 
+        Length is required. width truly optional. If not declared, not assigned.
+        Depth will always be "3". It cannot be given another value in the element. -->
+    <!ATTLIST item size CDATA "3" stockroom CDATA "A-12" length CDATA #REQUIRED width CDATA #IMPLIED depth CDATA #FIXED "3">
+    <!-- If multiple internal ATTLIST declarations made of same element, only first recognized. 
+        Internal declarations take precidence over external declarations. -->
+    <!ELEMENT enum (#PCDATA)>
+    <!-- Enumerated attribute - limit attributes to select values. -->
+    <!ATTLIST enum material (wood | metal | plastic) "wood">
+    <!-- Using ID attribute. Only one ID attribute per element. IDREF and IDREFS allows for refence to other elements -->
+    <!ELEMENT list-item ANY >
+    <!ATTLIST list-item primary-key ID #REQUIRED used-on IDREF #IMPLIED multi-use IDREFS #IMPLIED>
+]>
+<item size="44" length="12">
+    <!-- Not Valid -->
+    <enum material="wool" />
+    <!-- Valid -->
+    <enum material="plastic" />
+    <list-item primary-key="A1" used-on="A2" />
+    <list-item primary-key="A2" multi-use="A1 A3"/>
+    <list-item primary-key="A3" />
+</item>
+
+<!-- CDATA perserves whitespace. Other attribute types do not. -->
