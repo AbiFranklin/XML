@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Only preserved whitespace will be in id attribute and text within item tags depending on XSLT implementation -->
+<!-- xml:space="preserve" - all whitespace treated as significant -->
+<!-- Declaring NMTOKENS with default format normalizes whitespace -->
+<!-- No more than two dashes in a row in comments -->
+<?items this is an example of a processing instruction that targets items element?>
+<!DOCTYPE items [
+    <!ATTLIST item id NMTOKENS "B">
+]>
+<items xml:space="preserve" >
+    <item id   =   "   8   "   > A big dog. </item>
+    <item xml:space="default">     </item>
+</items >
