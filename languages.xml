@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <item xml:lang="en-us">
+        <price>2.00</price>
+        <length>1</length>
+        <width>2</width>
+    </item>
+    <item xml:lang="EN-gb">
+        <price>3.00</price>
+        <length>3</length>
+        <width>4</width>
+    </item>
+    <item xml:lang="en-gb">
+        <price xml:lang="en-us">4.00</price>
+        <length>5</length>
+        <width>6</width>
+    </item>
+    <item xml:lang="fr-gd">
+        <price>5.00</price>
+        <length>7</length>
+        <width>8</width>
+    </item>
+</items>
